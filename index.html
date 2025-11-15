@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Runner AI - AI Search Algorithm Implementation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Maze Runner AI</h1>
+            <p>Implementing AI Search Algorithms in a Game Scenario</p>
+        </header>
+        
+        <div class="game-container">
+            <div class="controls">
+                <h2>Algorithm Selection</h2>
+                <div class="algorithm-selector">
+                    <button id="bfs-btn" class="algorithm-btn">Breadth-First Search</button>
+                    <button id="dfs-btn" class="algorithm-btn">Depth-First Search</button>
+                    <button id="greedy-btn" class="algorithm-btn">Greedy Best-First</button>
+                    <button id="astar-btn" class="algorithm-btn">A* Search</button>
+                </div>
+                
+                <div class="maze-controls">
+                    <button id="generate-btn">Generate New Maze</button>
+                    <button id="start-btn">Start Search</button>
+                    <button id="reset-btn">Reset</button>
+                    <button id="step-btn">Step Through</button>
+                    <button id="compare-btn">Run Comparison</button>
+                </div>
+                
+                <div class="stats">
+                    <h3>Performance Metrics</h3>
+                    <div id="stats-container">
+                        <p>Path Length: <span id="path-length">0</span></p>
+                        <p>Nodes Explored: <span id="nodes-explored">0</span></p>
+                        <p>Time Taken: <span id="time-taken">0</span> ms</p>
+                        <p>Algorithm: <span id="current-algorithm">BFS</span></p>
+                    </div>
+                </div>
+                
+                <div class="algorithm-info">
+                    <h3>Algorithm Information</h3>
+                    <div id="algorithm-description">
+                        <p><strong>Breadth-First Search (BFS)</strong>: Explores all nodes at the current depth before moving deeper. Complete and optimal for uniform cost problems.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="maze-container">
+                <canvas id="maze-canvas" width="600" height="600"></canvas>
+                <div class="legend">
+                    <div class="legend-item">
+                        <div class="color-box start"></div>
+                        <span>Start Position</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="color-box goal"></div>
+                        <span>Goal Position</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="color-box wall"></div>
+                        <span>Wall/Obstacle</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="color-box explored"></div>
+                        <span>Explored Node</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="color-box path"></div>
+                        <span>Final Path</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="maze.js"></script>
+    <script src="algorithms.js"></script>
+    <script src="ui.js"></script>
+    <script src="comparison.js"></script>
+    <script src="multi-algorithm.js"></script>
+</body>
+</html>
